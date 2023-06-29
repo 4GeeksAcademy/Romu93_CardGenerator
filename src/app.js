@@ -40,8 +40,23 @@ window.onload = function() {
   if (random_simbol === "♥" || random_simbol === "♦") {
     the_header.classList.add("text-danger");
     the_foother.classList.add("text-danger");
+  } else {
+    the_header.classList.remove("text-danger");
+    the_foother.classList.remove("text-danger");
   }
 };
+
+let randomCard = document.querySelector("#myButton");
+randomCard.addEventListener("click", function() {
+  window.onload();
+});
+
+function timer() {
+  window.onload();
+  setTimeout(timer, 3000);
+}
+
+setTimeout(timer, 5000);
 
 //function updateCard() {
 //let suit = randomCardSuit();
