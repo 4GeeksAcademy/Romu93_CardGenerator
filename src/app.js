@@ -46,50 +46,31 @@ window.onload = function() {
   }
 };
 
+//Al ejecutar el boton con ID myButton se obtiene una nueva carta
 let randomCard = document.querySelector("#myButton");
 randomCard.addEventListener("click", function() {
   window.onload();
 });
 
+//funcion que hace cambiar la carta automaticamente cada 3 segundos
 function timer() {
   window.onload();
   setTimeout(timer, 3000);
 }
-
 setTimeout(timer, 5000);
 
-//function updateCard() {
-//let suit = randomCardSuit();
-
-//topCardSuit.innerHTML = suit;
-//bottomCardSuit.innerHTML = suit;
-//cardNumber.innerHTML = randomCardNumber();
-
-//if (suit === "♥" || suit === "♦") {
-//   topCardSuit.classList.add("text-danger");
-//  bottomCardSuit.classList.add("text-danger");
-//  cardNumber.classList.add("text-danger");
-//} else {
-// topCardSuit.classList.remove("text-danger");
-//bottomCardSuit.classList.remove("text-danger");
-// cardNumber.classList.remove("text-danger");
-//}
-//}
-
-/*function updateCard() {
-  let suit = randomCardSuit();
-
-  topCardSuit.innerHTML = suit;
-  bottomCardSuit.innerHTML = suit;
-  cardNumber.innerHTML = randomCardNumber();
-
-  if (suit === "♥" || suit === "♦") {
-    topCardSuit.classList.add("text-danger");
-    bottomCardSuit.classList.add("text-danger");
-    cardNumber.classList.add("text-danger");
-  } else {
-    topCardSuit.classList.remove("text-danger");
-    bottomCardSuit.classList.remove("text-danger");
-    cardNumber.classList.remove("text-danger");
-  }
-}*/
+//Al dal valores en los inputs se ajustará el width y el heigth según estos
+let buttonwidth = document.querySelector("#widthbutton");
+buttonwidth.addEventListener("click", function() {
+  let inputwidth = document.querySelector("#thewidth");
+  let valuewhidth = inputwidth.value;
+  let card = document.querySelector(".card");
+  card.style.width = valuewhidth + "px";
+});
+let buttonheight = document.querySelector("#heightbutton");
+buttonheight.addEventListener("click", function() {
+  let inputheight = document.querySelector("#theheight");
+  let valueheight = inputheight.value;
+  let card = document.querySelector(".card");
+  card.style.height = valueheight + "px";
+});
